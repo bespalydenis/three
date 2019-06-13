@@ -1,0 +1,24 @@
+doctype html
+html
+	head
+		meta(charset='UTF-8')
+		title 3D
+		link( rel="stylesheet" type="text/css" href="style.css")
+	body
+		div.content
+			div#renderType Cube
+			ul.select#select
+				li(data-type="cube").select_option.active Cube
+				li(data-type="cylinder").select_option Cylinder
+				li(data-type="sphere").select_option Sphere
+
+		div#size
+			input(type="number" min="1" max="10" value="5" id="sizeX")
+			input(type="number" min="1" max="10" value="5" id="sizeY")
+			input(type="number" min="1" max="10" value="5" id="sizeZ")
+			a(href="javascript:void(0);")#updateSize Update Size
+
+		script(src="https://cdnjs.cloudflare.com/ajax/libs/three.js/105/three.js")
+		script(src="https://threejs.org/examples/js/controls/OrbitControls.js")
+		script(src="index.js")
+		
